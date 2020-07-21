@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect } from 'react';
 import { Link, useHistory } from 'react-router-dom';
 import M from 'materialize-css';
 import firebase from './firebase';
@@ -9,6 +9,11 @@ const Navbar = () => {
 
     const history = useHistory();
     const { currentUser } = useContext(AuthContext);
+
+    useEffect(() => {
+        let sidenav = document.querySelector('#mobile-links');
+        M.Sidenav.init(sidenav, {});
+      }, [])
 
     const renderList = () => {
         if (currentUser) {
