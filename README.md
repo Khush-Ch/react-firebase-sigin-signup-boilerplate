@@ -1,5 +1,7 @@
 # react-firebase-sigin-signup-boilerplate
 
+Add a .env file in the root directory consisting the firebase credentials
+
 - Navbar
 - Signin
 - Signup
